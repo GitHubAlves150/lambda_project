@@ -12,7 +12,7 @@ meu-projeto/
 │   │   ├── usuario.go          ← Entidade
 │   │   ├── repositorio.go      ← Interface (contrato)
 │   │   └── servico.go          ← Casos de uso / regras
-│   │
+│   │go get github.com/google/uuid
 │   ├── handler/                ← Camada HTTP (Gin fica aqui)
 │   │   └── usuario_handler.go  ← Recebe requisição, chama serviço
 │   │
