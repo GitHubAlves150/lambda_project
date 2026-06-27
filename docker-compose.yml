@@ -1,0 +1,44 @@
+# O docker-compose.yml 
+# é um arquivo que define e sobe varios serciços com um único comando.
+# para não ter que subir cada serviço manualmente, inserindo todos no mesmo arquivo ele roda com apenas um único comando "docker-compose up -d"
+# È como se vocẽ estivesse criando um bash no linux (.sh) e dentro dele tivesse varios comandos de instalação separados por ';' e ao rodar 
+# ele vai instalando um por um.
+
+# Os comandos mais usados
+
+# Sobe tudo em segundo plano
+ # docker compose up -d
+
+# --- Derruba tudo---
+# docker doccompose down
+
+# ---Derruba e apaga os volumes (cuidado — apaga dados do banco)
+#    docker-compose down -v
+
+# ---Ver logs de todos os serviços
+#    docker-compose logs -f
+
+# ---Ver logs só da API
+#    docker-compose logs -f api
+
+# ---Ver o que está rodando
+#    docker-compose ps
+
+# ---Rebuilda a imagem da API e sobe
+#    docker-compose up -d --build api
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: rastreador-postgres
+    environment:
+      POSTGRES_USER: rastreador
+      POSTGRES_PASSWORD: rastreador123
+      POSTGRES_DB: rastreador
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
