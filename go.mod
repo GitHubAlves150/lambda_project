@@ -1,6 +1,6 @@
 module lambda_tracker
 
-go 1.22.5
+go 1.23
 
 require (
 	github.com/aws/aws-lambda-go v1.54.0
@@ -8,6 +8,8 @@ require (
 )
 
 require (
+	github.com/go-chi/chi v1.5.5 // indirect
+	github.com/go-chi/chi/v5 v5.3.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect

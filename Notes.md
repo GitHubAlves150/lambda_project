@@ -45,3 +45,15 @@ meu-projeto/
 ├── Makefile                    ← Atalhos de comandos
 └── go.mod                      ← Dependências do projeto
 ```
+
+### Estrutura de pastas desta branch
+```bash
+lambda_project/
+├── cmd/api/main.go
+├── internal/
+│   ├── database/          ← Tarefa 1: PostgreSQL
+│   ├── auth/              ← Tarefa 2: API Key
+│   ├── docs/              ← Tarefa 3: Swagger
+│   └── tests/             ← Tarefa 4: Testes
+└── go.mod
+```
